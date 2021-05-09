@@ -18,8 +18,11 @@ an der folgenden Stelle im Script (main_uebung3.js) manuell eingefügt werden:
             showWeather.style.display = "block";
         }
     }
+    
     x.open("GET", `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=APIKEY`, true);
     x.send();
+    
+    }
 
 2. Gehe zu Zeile: x.open("GET", `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=APIKEY`, true);
 
@@ -39,7 +42,10 @@ an der folgenden Stelle im Script (main_uebung3.js) manuell eingefügt werden:
             showWeather.style.display = "block";
         }
     }
+    
     x.open("GET", `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=a1b2c3d4e5f6g7h8i9j`, true);
     x.send();
+    
+    }
     
 5. Anschließend kann die Html-Datei ausgeführt werden, woraufhin auf der Html-Page die angeforderten Wetterdaten zum gewählten Standort erscheinen.
