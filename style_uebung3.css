@@ -1,0 +1,35 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color:lightsteelblue;
+}
+.weatherdiv{
+    float: left;
+    padding: 18px;
+    margin-right: 1%;
+    border-color: azure;
+    border-width: 5px;
+    border-style: groove;
+} 
+.buttons{
+    background-color:peachpuff;
+}
+.form{
+   font-size: smaller;
+}
+.resetbutton{
+   background-color: snow;
+}
+.p1{
+    background-color: azure;
+}
+.p2{
+    font-weight: bold;
+    background-color: azure;
+}
+.p3{
+    font-weight: bold;
+}
+.forecast{
+    padding: 18px;
+    margin-top: 23%;
+}
