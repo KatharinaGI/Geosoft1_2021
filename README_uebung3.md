@@ -14,7 +14,6 @@ an der folgenden Stelle im Script (main_uebung3.js) manuell eingefügt werden:
     x.onreadystatechange = function statechangecallback(){
         if (x.status == "200" && x.readyState == 4){
             let response = JSON.parse(x.responseText);
-    
             showWeatherData(response);
             showWeather.style.display = "block";
         }
@@ -36,7 +35,6 @@ an der folgenden Stelle im Script (main_uebung3.js) manuell eingefügt werden:
     x.onreadystatechange = function statechangecallback(){
         if (x.status == "200" && x.readyState == 4){
             let response = JSON.parse(x.responseText);
-    
             showWeatherData(response);
             showWeather.style.display = "block";
         }
