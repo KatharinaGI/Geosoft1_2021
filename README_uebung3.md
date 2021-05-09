@@ -20,13 +20,17 @@ an der folgenden Stelle im Script (main_uebung3.js) manuell eingefügt werden:
     }
     
     x.open("GET", `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=APIKEY`, true);
+    
     x.send();
     
     }
 
-2. Gehe zu Zeile: x.open("GET", `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=APIKEY`, true);
+2. Gehe zu Zeile: 
+
+   x.open("GET", `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=APIKEY`, true);
 
 3. An der Stelle "APIKEY" im Link muss stattdessen der eigene API-Key eingefügt werden. Beispiel:
+
    x.open("GET", `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=a1b2c3d4e5f6g7h8i9j`, true);
    
 4. Im Falle des oben beispielhaft gewählten API-Keys sähe die Funktion im Script also anschließend so aus:
@@ -44,6 +48,7 @@ an der folgenden Stelle im Script (main_uebung3.js) manuell eingefügt werden:
     }
     
     x.open("GET", `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=a1b2c3d4e5f6g7h8i9j`, true);
+    
     x.send();
     
     }
