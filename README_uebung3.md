@@ -5,26 +5,8 @@ Zum Ausführen der Html-Datei für die Übung 3 werden die folgenden 3 Dateien b
 Da zum Ausführen des Javascripts ein API-Key für die openweathermap-Anfrage benötigt wird, muss dieser individuell (der eigene openweathermap-API-key) 
 an der folgenden Stelle im Script (main_uebung3.js) manuell eingefügt werden: 
 
-1. Suche Function "askWeather(latitude, longitude)":
-   
-   function askWeather(latitude, longitude){
-
-    var x = new XMLHttpRequest(); 
-
-    x.onreadystatechange = function statechangecallback(){
-        if (x.status == "200" && x.readyState == 4){
-            let response = JSON.parse(x.responseText);
-            showWeatherData(response);
-            showWeather.style.display = "block";
-        }
-    }
-    
-    x.open("GET", `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=APIKEY`, true);
-    
-    x.send();
-    
-    }
-
+1. Suche Function "askWeather(latitude, longitude){...}"
+  
 2. Gehe zu Zeile: 
 
    x.open("GET", `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=APIKEY`, true);
