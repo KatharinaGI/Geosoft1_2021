@@ -1,0 +1,195 @@
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 972px) {
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:rgb(246, 252, 241);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+header{
+    font-size: 28px;
+    font-weight: bold;
+    background-color:darkseagreen ;
+    color:rgb(246, 252, 241);
+    padding: 20px;
+}
+.content{
+    flex: 1;
+}
+footer{
+    background-color:darkseagreen;
+    text-align: right;
+    color: seashell;
+    font-size: x-small;
+    position:relative;
+    margin-top: 10px;
+    padding: 7px;
+}
+/* Style Navigation Menu */
+/* Source: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
+.topnav{
+    overflow: hidden;
+    background-color:rosybrown;
+    position: relative;
+}
+.topnav #myLinks{
+    display: none;
+}
+.topnav a{
+    color:seashell;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+.topnav a.icon{
+    background:peachpuff;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.active{
+    background-color:rosybrown;
+    color: seashell;
+  } 
+/* Style content */
+.buttons{
+    background-color:peachpuff;
+    margin-right: 7px;
+    margin-bottom: 5px;
+}
+.resetbutton{
+    background-color: snow;
+}
+#mainpage{
+    font-size: large;
+    text-align: center;
+    align-items: center;
+    margin-top: 150px;
+}
+#map {
+    height:645px;
+}
+.note{
+    font-size:smaller;
+    font-weight: bold;
+}
+.example{
+    font-size: small;
+}
+table{
+    table-layout: fixed;
+    width: 100%;
+    word-wrap: break-word;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;;
+}
+th, td {
+    padding: 10px;
+}
+th {
+    text-align:left;
+    color:darkseagreen;
+}
+}
+
+
+/* Devices that are larger than cell phones (768px and upp) */
+@media only screen and (min-width: 972px) {
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:rgb(246, 252, 241);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+header{
+    font-size: 34px;
+    font-weight: bold;
+    background-color:darkseagreen ;
+    color:rgb(246, 252, 241);
+    padding: 20px;
+}
+.content{
+    flex: 1;
+}
+footer{
+    background-color:darkseagreen;
+    text-align: right;
+    color: seashell;
+    position:relative;
+    margin-top: 10px;
+    padding: 7px;
+}
+/* Style Navigation Menu */
+.topnav{
+    overflow: hidden;
+    background-color:rosybrown;
+    position: relative;
+}
+.topnav #myLinks{
+    display: block;
+}
+.topnav a{
+    color:seashell;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: inline-block;
+}
+.topnav a.active{
+    display: none;
+}
+.topnav a.icon{
+    display: none;
+}
+/* Style content */
+.arrangement{
+    float: left
+}
+.buttons{
+    background-color:peachpuff;
+    margin-right: 7px;
+}
+.resetbutton{
+    background-color: snow;
+}
+#mainpage{
+    font-size: large;
+    text-align: center;
+    align-items: center;
+    margin-top: 300px;
+}
+#map {
+    height:645px;
+}
+.note{
+    font-size:smaller;
+    font-weight: bold;
+}
+.example{
+    font-size: small;
+}
+table{
+    table-layout: fixed;
+    width: 100%;
+    word-wrap: break-word;
+    }
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;;
+}
+th, td {
+    padding: 10px;
+}
+th {
+    text-align:left;
+    color:darkseagreen;
+}
+}
+

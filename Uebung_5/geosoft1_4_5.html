@@ -1,0 +1,93 @@
+<!-- author: Katharina Kaufmann-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uebung4_Kaufmann</title>
+
+    <link rel="stylesheet" type="text/css" href="style_uebung5.css">
+    <script src="Route_Uebung4.js"></script>
+    <script defer src= "main_uebung4_5.js"></script>
+
+    <!-- load jquery-->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+
+    <!-- load leaflet-->
+    <!-- Source: https://leafletjs.com/examples/quick-start/ -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script>   
+    
+    <!-- load turf-->
+    <!-- Source: https://turfjs.org/getting-started -->
+    <script src='https://unpkg.com/@turf/turf@6.3.0/turf.min.js'></script>
+
+    <!-- Load an icon library to show a hamburger menu on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header> Geosoftware1 SS21 - Uebung 5 - Kaufmann </header>
+      
+    <nav class="topnav">
+        <!-- Top Navigation Menu -->
+        <!-- Source: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp-->
+        <a href="#home" class="active"> Menu </a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+          <a href="geosoft1_5.html"> Back to the main page</a>
+          <a href= "geosoft1_2_5.html"> Uebung 2</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </nav> 
+    
+    <main role="main" class = "content">
+        <h2>  <u>Geosoftware1 SS21 - Uebung 4 - Kaufmann </u></h2> 
+        <p> Draw a rectangle to show its intersection with the route. If you click on the markers, you will see the local weather. You can also manually set a marker on or off the route by clicking on the map
+            or choose your own location by using the buttons.</p>
+        <section class = "arrangement">
+            <button class= "buttons" id= "positionButton"> Show my location </button> 
+            <button class = "buttons" id= "transferCoordinatesButton"> Show manual coordinates on map </button>
+            <p></p>
+            <form class = "form">
+                <label for="latitude">
+                  <b> Latitude: </b>
+                  <input type="text" id ="latitude" value= "">
+                  <p class= "example"> (example: 51.0915) </p>
+                </label>
+                <p></p>
+                <label for="longitude">
+                  <b> Longitude: </b>
+                  <input type="text" id ="longitude" value= "">
+                  <p class= "example"> (example: 7.0283) </p>
+                </label>
+              </form>
+            <p></p>
+        </section>
+        <aside>
+        <div id= "map"></div>
+        </aside>
+    </main>
+
+    <footer> 
+            © Katharina Kaufmann -
+            Geosoftware 1 / SS2021 -
+            Uebung 5 -
+            29.05.2021
+    </footer>
+
+</body>

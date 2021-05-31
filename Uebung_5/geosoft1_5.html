@@ -1,0 +1,63 @@
+<!-- author: Katharina Kaufmann-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Uebung5_Kaufmann</title>
+    <link rel="stylesheet" type="text/css" href="style_uebung5.css">
+
+    <!-- load bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"> </script>
+
+    <!-- Load an icon library to show a hamburger menu on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Function for showing and hiding the Hamburger Menu -->
+    <script> 
+        function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+        x.style.display = "none";
+        } else {
+        x.style.display = "block";
+        }
+        } 
+    </script>
+</head> 
+
+<body>
+    <header> Geosoftware1 SS21 - Uebung 5 - Kaufmann </header>
+  
+    <nav class= "topnav">
+        <!-- Top Navigation Menu -->
+        <!-- Source: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp-->
+        <a href="#home" class="active"> Menu </a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <a href="geosoft1_2_5.html"> Uebung 2</a>
+            <a href= "geosoft1_4_5.html"> Uebung 4</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+    <main role= "main" class = "content">
+        <div id= "mainpage">
+        <h2> Welcome to my solution for Exercise 5! </h2>
+        <p>You can use the menu bar to switch to my second and fourth submission of this course. Have fun! :) </p>
+        </div>
+    </main>
+
+    <footer> 
+        © Katharina Kaufmann -
+        Geosoftware 1 / SS2021 -
+        Uebung 5 -
+        29.05.2021
+    </footer>
+</body>
