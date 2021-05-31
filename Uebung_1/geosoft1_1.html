@@ -1,0 +1,44 @@
+<!-- author: Katharina Kaufmann-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uebung1_Kaufmann</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+        padding: 10px;
+        }
+        th {
+        text-align:left;
+        color:tomato
+        }
+        body
+        {
+        font-family: Arial, sans-serif;
+        }
+        </style>
+</head>
+<body bgcolor = #E0E6F8></body>
+    <h2>  Geosoftware1 SS21 - Uebung 1 - Kaufmann</h2>
+    <p> The table below shows the calculated route sections (of a given route that runs through a given polygon) sorted by length with the associated coordinates.</p>   
+    <script src="polygon.js"></script> 
+    <script src="route.js"></script> 
+    <script defer src= "main_uebung1.js"></script> 
+    <table style="width:100%">
+        <tr>
+          <th>Route section</th>
+          <th>Length in meters</th>
+          <th>Coordinates of the starting point (lng/lat)</th>
+          <th>Coordinates of the ending point (lng/lat)</th>
+        </tr>
+      <tBody id= "tbody"></tBody>
+      </table> 
+      <p id= "lengthinfo"></p>
+</body>

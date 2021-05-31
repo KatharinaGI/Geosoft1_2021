@@ -1,0 +1,87 @@
+<!-- authors: Thomas Kujawa, Katharina Kaufmann-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uebung3_Kujawa_Kaufmann</title>
+    <link rel="stylesheet" type="text/css" href="style_uebung3.css">
+    <script defer src= "main_uebung3.js"></script>   
+</head>
+
+<body>
+    <h2>  <u>Geosoftware1 SS21 - Uebung 3 - Kujawa- Kaufmann </u></h2>  
+    <div id= "positiondiv">
+        <h4> Click the button below to find your location. Alternatively, you can choose coordinates manually. </h4>
+        <div>
+        <p>
+            <button class= "buttons" id= "positionButton"> Show my location </button>
+            <form class = "form">
+                <label for="latitude">
+                  <b> Latitude: </b>
+                  <input type="text" id ="latitude" value= "">
+                  (example: 51.0915)
+                </label>
+                <p></p>
+                <label for="longitude">
+                  <b> Longitude: </b>
+                  <input type="text" id ="longitude" value= "">
+                  (example: 7.0283)
+                </label>
+              </form>
+            <p></p>
+            <button class = "buttons" id= "transferCoordinatesButton"> Transfer manuel coordinates </button>
+            <button class = "resetbutton" onclick= "javascript:location.reload();"> Reset location </div>
+        </p>
+    </div>
+
+    <div id= "showLocation" style="display: none;">
+        <h4> Your current location: </h4>
+        <p class = "p1" id= "position"> </p>   
+    </div>  
+
+    <div id= "showWeather" style="display: none;">
+        <h4> The current weather at your location: </h4> 
+        <div class = "weatherdiv">  
+        <p class= "p2" id= "description"> </p> 
+        <p id= "timezone"></p>    
+        <p id= "temp"></p>
+        <p id= "feelsLike"></p>
+        <p id= "humidity"></p>
+        <p id= "clouds"></p>
+        <p id= "windSpeed"></p>
+        <p id= "visibility"></p>
+        <p id= "vorhersage"></p>
+        </div>
+        <div class = "weatherdiv">
+            <p class= "p3" id= "weatherIcon"></p>
+            <p id= "weather"> </p>
+        </div> 
+    </div>
+    
+    <div class= "forecast" id= "forecast" style="display: none;"> 
+        <h4> 7 day weather </h4>
+        <table>
+            <tr>
+              <th> 1 </th>
+              <th> 2 </th>
+              <th> 3 </th>
+              <th> 4 </th>
+              <th> 5 </th>
+              <th> 6 </th>
+              <th> 7 </th>
+            </tr>
+            <tr>
+                <td id= "day1"> </td>
+                <td id= "day2"> </td>
+                <td id= "day3"> </td>
+                <td id= "day4"> </td>
+                <td id= "day5"> </td>
+                <td id= "day6"> </td>
+                <td id= "day7"> </td>
+            </tr>
+        </table>
+    </div>
+</body>
