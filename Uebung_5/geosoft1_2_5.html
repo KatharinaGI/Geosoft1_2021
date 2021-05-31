@@ -1,0 +1,90 @@
+<!-- author: Katharina Kaufmann-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uebung2_Kaufmann</title>
+
+    <link rel="stylesheet" type="text/css" href="style_uebung5.css">
+    <script src="polygon.js"></script> 
+    <script src="route.js"></script> 
+    <script defer src= "main_uebung2_5.js"></script>
+    
+    <!-- Load an icon library to show a hamburger menu on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <header> Geosoftware1 SS21 - Uebung 5 - Kaufmann </header>
+  
+  <nav class="topnav">
+      <!-- Top Navigation Menu -->
+      <!-- Source: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp-->
+      <a href="#home" class="active"> Menu </a>
+      <!-- Navigation links (hidden by default) -->
+      <div id="myLinks">
+        <a href="geosoft1_5.html"> Back to the main page</a>
+        <a href= "geosoft1_4_5.html"> Uebung 4</a>
+      </div>
+      <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+  </nav> 
+
+  <main role= "main" class="content">
+      <h2>  <u>Geosoftware1 SS21 - Uebung 2 - Kaufmann</u></h2>
+
+      <div id="uploaddiv">
+          <p>Upload the route you want to display as a .geojson file (type: LineString). Alternatively, you can use the default file. </p>
+          <p class = "note"> Note: if the uploaded file is not in <i> .geojson </i> format, the application will not work.</p>
+          <form action="myphp.php" method="post">
+            <input type="file" id="uploadfield"> 
+            <input type="reset" value="Delete" /> 
+          </form>
+      </div>
+      
+      <div>
+        <p>
+          <button class = "buttons" id= "uploadButton"> Use uploaded file</button>
+          <button class = "buttons" id= "defaultButton"> Use default file</button>
+          <button class = "resetbutton" onclick= "javascript:location.reload();"> reset file</div>
+        </p>
+      </div>
+    
+      <div id="resultTable" style="display: none;">
+      <p> The table below shows the calculated route sections (of a given route that runs through a given polygon) sorted by length with the associated coordinates.</p>   
+      <table>
+          <tr>
+            <th>Route section</th>
+            <th>Length in meters</th>
+            <th>Coordinates of the starting point (lng/lat)</th>
+            <th>Coordinates of the ending point (lng/lat)</th>
+          </tr>
+        <tBody id= "tbody"></tBody>
+      </table> 
+        <p id= "lengthinfo"></p>
+      </div>
+
+      <div id= "showGeojson" style="display: none;">
+        <p>
+          <button class = "buttons" id="showRouteAsStringButton"> Show selected route as a .geojson file</button>
+          <button class = "buttons" id="showPolygonAsStringButton"> Show used polygon as a .geojson file</button>
+        </p>
+        <p id= "routeAsStringInfo" style = "display: none;"></p>
+        <p id= "polygonAsStringInfo" style = "display: none;"></p>
+      </div>
+  </main>
+
+  <footer> 
+      © Katharina Kaufmann -
+      Geosoftware 1 / SS2021 -
+      Uebung 5 -
+      29.05.2021
+  </footer>
+
+</body>
