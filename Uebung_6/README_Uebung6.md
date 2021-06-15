@@ -21,7 +21,7 @@ Danach sollte (nach npm install) das starten mit "npm start" funktionieren.
 PS: Das Implementieren einer "Umbennen"-Funktion haben wir leider nicht mehr geschaftt!
 
 
-!HINWEIS!: Die Abgabeversion des main_uebung4.js - Skriptes ist auf den Browser "Mozilla Firefox" ausgelegt. Bei Nutzung dieses Browsers kann, neben den Markern des gezeichneten Polygons, auch jeder andere Punkt auf der Karte für eine Wetterabfrage ausgewählt werden. Sollte die Abgabe in einem anderen Browser (Edge, Opera) ausgeführt werden, muss die map.on(...)-Funktion am Ende des main_uebung4.js-Skriptes entfernt/auskommentiert werden:
+!HINWEIS!: Die Abgabeversion des global.js - Skriptes ist auf den Browser "Mozilla Firefox" ausgelegt. Bei Nutzung dieses Browsers kann, neben den Markern des gezeichneten Polygons, auch jeder andere Punkt auf der Karte für eine Wetterabfrage ausgewählt werden. Sollte die Abgabe in einem anderen Browser (Edge, Opera) ausgeführt werden, muss die map.on(...)-Funktion am Ende des main_uebung4.js-Skriptes entfernt/auskommentiert werden:
 
                      /**
                      //Allows data to be displayed without drawing a rectangle.
@@ -33,4 +33,4 @@ PS: Das Implementieren einer "Umbennen"-Funktion haben wir leider nicht mehr ges
                      });
                      */
 
-Wieso genau Edge an dieser Stelle ein Problem mit dem Zeichnen des Polygons hat und Firefox nicht, weiß ich leider nicht. Ich wollte die Funktion jedoch ungerne streichen, da sie ja in Firefox problemlos läuft! :)
+Wieso genau Edge an dieser Stelle ein Problem mit dem Zeichnen des Polygons hat und Firefox nicht, wissen wir leider nicht. Wir wollten die Funktion jedoch ungerne streichen, da sie ja in Firefox problemlos läuft! :)
