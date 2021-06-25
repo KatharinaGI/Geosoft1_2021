@@ -1,0 +1,71 @@
+extends layout
+
+block content
+
+    header#top  Geosoftware1 SS21 - Uebung 6 - Kujawa, Kaufmann 
+    nav.topnav
+      // Top Navigation Menu
+      // Source: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+      a.active(href='#home')  Menu 
+      // Navigation links (hidden by default)
+      #myLinks
+        a(href='#routemanager')  Manage routes
+      // "Hamburger menu" / "Bar icon" to toggle the navigation links
+      a.icon(href='javascript:void(0);' onclick='myFunction()')
+        i.fa.fa-bars
+    main.content(role='main')
+      h2
+        u  Map viewer 
+      p
+        | Draw a rectangle to show its intersection with the route. If you click on the markers, you will see the local weather. You can also manually set a marker on or off the route by clicking on the map
+        | or choose your own location by using the buttons.
+      p
+        | A predefined route is displayed by default, via 
+        a.link(href='#routemanager') manage routes 
+        |  you can add, select and delete your routes. By clicking on your route name in the table you can select the route.
+      section.arrangement
+        button#positionButton.buttons  Show my location 
+        button#transferCoordinatesButton.buttons  Show manual coordinates on map 
+        p
+        form.form
+          label(for='latitude')
+            b  Latitude: 
+            input#latitude(type='text' value='')
+            p.example  (example: 51.0915) 
+          p
+          label(for='longitude')
+            b  Longitude: 
+            input#longitude(type='text' value='')
+            p.example  (example: 7.0283) 
+      aside
+        #map
+      p   
+      h2#routemanager
+        u  Route manager 
+
+    #routeList
+      table
+        thead
+          th Routename
+          th .geojson data 
+          th Delete?
+        tbody
+        
+    h3 Add Route 
+    #addRoute
+      fieldset
+        input#inputRouteName(type='text', placeholder='Routename')
+        input#inputRouteGeodata(type='text', placeholder='Data') 
+        p 
+        button#btnAddRoute Add Route 
+
+      p
+      a.link(href='#top')  Back to top 
+
+    footer
+      | © Thomas Kujawa, Katharina Kaufmann -
+      | Geosoftware 1 / SS2021 -
+      | Uebung 6 -
+      | 15.06.2021
+    
+
