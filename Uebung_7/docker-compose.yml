@@ -15,6 +15,6 @@ services:
             - '27017:27017'
     mongoexpressservice: 
         image: mongo-express
-        restart: always
+        restart: unless-stopped
         ports: 
             - '8081:8081'
