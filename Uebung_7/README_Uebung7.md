@@ -1,6 +1,7 @@
 # Geosoft1_2021
 
 Das Starten der Anwendung für die Übung 7 kann mit "docker-compose up" erfolgen. Hierdurch werden alle nötigen Images (katharinagi/appservice, mongo, mongo-express) heruntergeladen, die node modules (npm install) installiert und anschließend die Anwendung gestartet. Die Hauptseite zur Übung ist über localhost:4000 zu erreichen, die Datenbank über localhost:8081.
+
 Link zum DockerHub-Repository: https://hub.docker.com/r/katharinagi/appservice 
 
 Zum Ausführen der Abgabe für die Übung 7 wird für die Javascript-Datei "global.js" ein API-Key für die openweathermap-Anfrage benötigt, dieser muss individuell (der eigene openweathermap-API-key) an der folgenden Stelle im Script (global.js) manuell eingefügt werden:
