@@ -7,7 +7,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Uebung6_Kujawa_Kaufmann' });
+  res.render('index', { title: 'Uebung7_Kujawa_Kaufmann' });
 });
 
 module.exports = router;
