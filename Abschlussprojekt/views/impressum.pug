@@ -1,0 +1,47 @@
+extends sources
+
+block content
+
+    header#top  GEOSOFTWARE SS21 - ABSCHLUSSPROJEKT - KUJAWA, KAUFMANN
+    header.title Your map-based, interactive, digital city guide through Münster
+    nav.topnav
+      // Top Navigation Menu
+      // Source: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+      a.active(href='#home')  Menu 
+      // Navigation links (hidden by default)
+      #myLinks
+        a(href='/')  Home 
+        a(href='/edit') Edit 
+        a(href='/impressum') Impressum
+      // "Hamburger menu" / "Bar icon" to toggle the navigation links
+      a.icon(href='javascript:void(0);' onclick='myFunction()')
+        i.fa.fa-bars
+    main.content(role='main')
+
+      h2  Impressum
+      br
+      br
+      form(class='impressum')
+          p.b Abschlussprojekt Geosoftware 1 - SS2021
+          P Universität Münster, Fachbereich 14
+          p Dozent: Auriol Degbelo
+          p Modul: Geosoftware 1
+          p 19.09.2021
+          br
+          p.b Katharina Kaufmann 
+          p B. Sc. Geographie 
+          p kkaufman@uni-muenster.de
+          br
+          p.b Thomas Kujawa
+          p B. Sc. Geoinformatik
+          p t_kuja01@uni-muenster.de
+
+    //Impressum
+    footer
+      | © Geosoftware 1 / SS2021 - Abschlussprojekt - 19.09.2021
+    
+      block scripts
+        script(src='/javascripts/global.js', defer)
+
+
+

@@ -1,0 +1,81 @@
+extends sources
+
+block content
+
+    header#top  GEOSOFTWARE SS21 - ABSCHLUSSPROJEKT - KUJAWA, KAUFMANN
+    header.title Your map-based, interactive, digital city guide through Münster
+    nav.topnav
+      // Top Navigation Menu
+      // Source: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+      a.active(href='#home')  Menu 
+      // Navigation links (hidden by default)
+      #myLinks
+        a(href='/')  Home 
+        a(href='/edit') Edit 
+        a(href='/impressum') Impressum
+      // "Hamburger menu" / "Bar icon" to toggle the navigation links
+      a.icon(href='javascript:void(0);' onclick='myFunction()')
+        i.fa.fa-bars
+    main.content(role='main')
+      aside
+        #homemap 
+        p
+        button(class= 'buttons' id ='busses') Show all busstops
+        button(class= 'buttons' onClick="window.location.reload();") Hide busstops
+        br
+        
+        form(class = 'search')
+          input#sights(type='search' placeholder='Search for sights' aria-label='search')    
+          button.btn.btn-outline-secondary(id = 'btnSearchSight' type='button') Search  
+        
+        #showSights                   
+        //https://stackoverflow.com/questions/52071696/using-a-pug-each-loop-through-an-array-of-objects
+        table
+            tr  
+                th Sight
+                th Show on map / Next busstop 
+            each n, index in allsights
+                tr
+                    td= n.features[0].properties.Name
+                    td
+                        input(type='checkbox' id=n._id)
+                       
+        button(class= 'buttons' id='showOnMap') Show on map 
+        button(class= 'buttons' id='showNearestBus') Show nearest busstop
+        
+        form(class = 'search')
+          input#tours(type='search', placeholder='Search for tours', aria-label='search')
+          button.btn.btn-outline-secondary(id= 'btnSearchTour' type="button") Search
+
+        #showTours                   
+        //https://stackoverflow.com/questions/52071696/using-a-pug-each-loop-through-an-array-of-objects
+        table
+            tr  
+                th Tour
+                th I want details
+            each n, index in alltours
+                tr
+                    td= n.name
+                    td
+                        input(type='checkbox' id=n._id)
+
+        button(class= 'buttons' id='showMore') Show details
+        button(class= 'buttons' onClick="window.location.reload();") Hide details
+        
+        #showTourDetails(style="display: none")
+        table(class = "detailstable" id="detailtable") 
+         
+    //Impressum
+    footer
+      | © Geosoftware 1 / SS2021 - Abschlussprojekt - 19.09.2021
+    
+      script.
+        var sights = !{JSON.stringify(allsights)}
+        var tours = !{JSON.stringify(alltours)}
+
+      block scripts 
+        script(src='/javascripts/homemap.js', defer)
+        script(src='/javascripts/oepnv.js', defer)
+        script(src='/javascripts/search.js', defer)
+        script(src='/javascripts/tourdetails.js', defer)
+        script(src='/javascripts/global.js', defer)

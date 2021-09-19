@@ -1,0 +1,313 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 972px) {
+	body {
+		font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		background-color:rgb(246, 252, 241);
+		display: flex;
+		min-height: 100vh;
+		flex-direction: column;
+	}
+	header{
+		font-size: 28px;
+		font-weight: bold;
+		text-align: center;
+		background-color:rgb(142, 186, 206) ;
+		color:rgb(246, 252, 241);
+		padding: 20px;
+	}
+	.title{
+		font-size: 25px;
+		font-weight:600;
+		font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		background-color:rgb(73, 55, 60) ;
+		color:rgb(202, 202, 202);
+		padding: 14px;
+	}
+	.content{
+		flex: 1;
+	}
+	footer{
+		background-color:rgb(142, 186, 206);
+		font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		text-align: right;
+		color: rgb(246, 252, 241);
+		font-size: x-small;
+		position:relative;
+		margin-top: 10px;
+		padding: 7px;
+	}
+	/* Style Navigation Menu */
+	/* Source: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
+	/* Style Navigation Menu */
+	/* Source: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
+	.topnav{
+		overflow: hidden;
+		background-color:rosybrown;
+		position: relative;
+	}
+	.topnav #myLinks{
+		display: none;
+	}
+	.topnav a{
+		color:seashell;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 17px;
+		display: block;
+	}
+	.topnav a.icon{
+		background:peachpuff;
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.active{
+		background-color:rosybrown;
+		color: seashell;
+	  } 
+	/* Style content */
+	h2{
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		color:rgb(73, 55, 60);
+		text-align: center;
+		font-size: 20px;
+		border-bottom: double rosybrown;
+		padding: 5px;
+	}
+	h5{
+		color:rgb(246, 252, 241); 
+		font-size: 0px;
+	}
+	.buttons{
+		width: 20%;
+		margin-top:10px;
+		margin-bottom: 10px;
+		background-color:peachpuff;
+		float: left;
+	}
+	.editbutton{
+		width: 50%;
+		background-color: peachpuff;
+	}
+	.input{
+		width: 40%;
+	}
+	.search{
+		margin: 15px;
+		margin-inline-end:300px;
+	}
+	#map {
+		height:645px;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	#homemap{
+		height: 645px;
+		width: 100%;
+		float: left;
+	}
+	.description{
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-style: inherit;
+		text-align: center;
+		color: seashell;
+		padding: 5px ;
+		background-color: rgb(73, 55, 60) ;
+	}
+	table{
+		table-layout: fixed;
+		width: 100%;
+		word-wrap: break-word;
+		margin-bottom: 10px;
+		}
+	table, th, td {
+		border: 1px solid rgba(75, 73, 73, 0.493);
+		border-collapse: collapse;
+		padding:10px;
+	}
+	th {
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		text-align:center;
+		color:rgb(73, 55, 60);
+		background-color:rgba(168, 152, 152, 0.247);
+	}
+	.delete{
+		table-layout: fixed;
+		width: 100%;
+		word-wrap: break-word;
+		margin-bottom: 30px;
+	}
+	.popup-headline{
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-size: medium;
+	}
+	.popup-input{
+		float: right;
+		padding-top: 10px;
+		background-color: lightgray;
+	}}
+
+	
+	
+	/* Devices that are larger than cell phones (768px and up) */
+	@media only screen and (min-width: 972px) {
+	body{
+		font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		background-color:rgb(246, 252, 241);
+		display: flex; /* flexibler Container */
+		min-height: 100vh; /* Mindestgröße von 100vh, damit er sich über die gesamte Höhe des Viewports erstreckt */
+		flex-direction: column; /* senkrechte Orientierung */
+	}
+	header{
+		font-size: 34px;
+		font-weight: bold;
+		text-align: center;
+		background-color:rgb(142, 186, 206) ;
+		color:rgb(246, 252, 241);
+		padding: 20px;
+	}
+	.title{
+		font-size: 25px;
+		font-weight:600;
+		font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		background-color:rgb(73, 55, 60) ;
+		color:rgb(202, 202, 202);
+		padding: 14px;
+	}
+	.content{
+		flex: 1; /* Verteilung des main-Elements über den verbleibenden Leerraum */ /* Auch: flex-grow: 1 */
+	}
+	footer{
+		background-color:rgb(142, 186, 206);
+		font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		text-align: right;
+		color: rgb(246, 252, 241);
+		position:relative;
+		margin-top: 10px;
+		padding: 7px;
+	}
+	/* Style Navigation Menu */
+	.topnav{
+		overflow: hidden;
+		background-color:rosybrown;
+		position: relative;
+	}
+	.topnav #myLinks{
+		display: block;
+	}
+	.topnav a{
+		color:seashell;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 17px;
+		display: inline-block;
+	}
+	.topnav a.active{
+		display: none;
+	}
+	.topnav a.icon{
+		display: none;
+	}
+	/* Style content */
+	
+	h2{
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		color:rgb(73, 55, 60);
+		text-align: center;
+		font-size: 20px;
+		border-bottom: double rosybrown;
+		padding: 5px;
+	}
+	h5{
+		color:rgb(246, 252, 241); 
+		font-size: 1px;
+	}
+	.buttons{
+		width: 15%;
+		margin-bottom: 10px;
+		background-color:peachpuff;
+		float: right;
+	}
+	.editbutton{
+		width: 35%;
+		background-color: peachpuff;
+	}
+	.input{
+		width: 20%;
+	}
+	.search{
+		margin: 15px;
+		float: right;
+	}
+	#map {
+		height:645px;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	#homemap{
+		height: 900px;
+		width: 79%;
+		float: left;
+	}
+	.description{
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-style: inherit;
+		text-align: center;
+		color: seashell;
+		padding: 5px ;
+		background-color: rgb(73, 55, 60);
+	}
+	table{
+		table-layout: fixed;
+		width: 20%;
+		word-wrap: break-word;
+		float: right;
+		margin-bottom: 10px;
+		}
+	table, th, td {
+		border: 1px solid rgba(75, 73, 73, 0.493);
+		border-collapse: collapse;
+		padding:10px;
+	}
+	th {
+		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		text-align:center;
+		color:rgb(73, 55, 60);
+		background-color:rgba(168, 152, 152, 0.247);
+	}
+	.add{
+		table-layout: fixed;
+		width: 100%;
+		word-wrap: break-word;
+	}
+	.delete{
+		table-layout: fixed;
+		width: 100%;
+		word-wrap: break-word;
+		margin-bottom: 30px;
+	}
+	.detailstable{
+		width: 79%;
+		float: left;
+	}
+	.popup-headline{
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-size: medium;
+	}
+	.popup-input{
+		float: right;
+		padding-top: 10px;
+		background-color: lightgray;
+	}
+	.impressum{
+		font-size: larger;
+		text-align: center;
+		line-height: 12px;
+	}
+	.b{
+		color:rgb(73, 55, 60);
+		font-weight: bold;
+		line-height: 14px;
+	}
+}

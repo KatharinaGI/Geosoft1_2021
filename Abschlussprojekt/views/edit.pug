@@ -1,0 +1,103 @@
+extends sources
+
+block content
+
+    header#top  GEOSOFTWARE SS21 - ABSCHLUSSPROJEKT - KUJAWA, KAUFMANN
+    header.title Your map-based, interactive, digital city guide through Münster
+    nav.topnav
+      // Top Navigation Menu
+      // Source: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+      a.active(href='#home')  Menu 
+      // Navigation links (hidden by default)
+      #myLinks
+        a(href='/')  Home 
+        a(href='/edit') Edit 
+        a(href='/impressum') Impressum
+      // "Hamburger menu" / "Bar icon" to toggle the navigation links
+      a.icon(href='javascript:void(0);' onclick='myFunction()')
+        i.fa.fa-bars
+    main.content(role='main')
+      
+      h2 Manage sights
+      
+      p.description Create sight using the map 
+        #map 
+
+      p.description Add sight as .geojson
+                form(method='post' action='/edit/addsightviaInputFile' enctype='multipart/form-data')
+                    input(class = 'input' type='file' name='inputfile') 
+                    button(class = 'editbuttons' type='submit') Confirm
+
+      p.description Add sight via text field 
+                form(method='post' action='/edit/addsightviatextfield' enctype='multipart/form-data')
+                    input(class = 'input' placeholder = 'Your geojson' type='textarea' name='textfield') 
+                    button(class = 'editbuttons' type='submit') Confirm
+                br
+                p Example of a correct entry:     
+                img(src='/stylesheets/BeispielGeoJSON.PNG')
+
+      p.description Delete sights
+        #DeleteSights                   
+        //Source: https://stackoverflow.com/questions/52071696/using-a-pug-each-loop-through-an-array-of-objects
+        table.delete
+            tr  
+                th Sight
+                th Delete
+                th 
+                  button( class = 'editbutton' id='deleteSightButton') Delete selected sights       
+            each n, index in allsights
+                tr
+                    td= n.features[0].properties.Name
+                    td
+                        input(type='checkbox' id=n._id)
+                     
+      h2 Manage tours 
+
+      p.description Create tour
+        #CreateTour              
+        //https://stackoverflow.com/questions/52071696/using-a-pug-each-loop-through-an-array-of-objects
+        table.add
+            tr  
+                th Sight
+                th Add to tour
+                th 
+                  label(for='tourname') Name of the tour: 
+                  input(type='text' id = 'tourname') 
+                th
+                  button( class = 'editbutton' id='addTourButton') Create tour from selected sights       
+            each n, index in allsights
+                tr
+                    td= n.features[0].properties.Name
+                    td
+                        input(type='checkbox' id=n._id)
+      h5 -    
+      p.description Delete tours
+        #DeleteTours             
+        //https://stackoverflow.com/questions/52071696/using-a-pug-each-loop-through-an-array-of-objects
+        table.delete
+            tr  
+                th Tour
+                th Delete
+                th 
+                  button( class = 'editbutton' id='deleteTourButton') Delete selected tours     
+            each n, index in alltours
+                tr
+                    td= n.name
+                    td
+                        input(type='checkbox' id=n._id)
+  
+             
+    //Footer
+    footer
+      | © Geosoftware 1 / SS2021 - Abschlussprojekt - 19.09.2021
+    
+      script.
+              var sights = !{JSON.stringify(allsights)}
+              var tours = !{JSON.stringify(alltours)}
+
+      block scripts 
+        script(src='/javascripts/tours.js', defer)
+        script(src='/javascripts/sights.js', defer)
+        script(src='/javascripts/search.js', defer)
+        script(src='/javascripts/global.js', defer)
+
